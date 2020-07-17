@@ -1,0 +1,74 @@
+<div class="column is-one-quarter">
+	<nav class="panel">
+	<p class="panel-heading">Top Posts</p>
+	
+	<a class="panel-block">
+        <div class="box">
+            <article class="media">
+            <div class="media-left">
+                <figure class="image is-32x32">
+                    <%= image_tag("Vikings_logo.jpg", :alt => "Vikings logo") %> 
+                </figure>
+            </div>
+
+                <div class="media-content">
+                    <div class="content">
+                        <strong>Saul Belisle</strong> <br/>
+                        <small>@saul_good_homie</small> <br/>
+                        <p>
+                        <%= Post.first.post %>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </a>
+    
+	<a class="panel-block">
+        <div class="box">
+            <article class="media">
+
+                <div class="media-left">
+                    <figure class="image is-32x32">
+                        <%= image_tag("Vikings_logo.jpg", :alt => "Vikings logo") %> 
+                    </figure>
+                </div>
+
+                <div class="media-content">
+                    <div class="content">
+                        <strong>Saul Belisle</strong> <br/>
+                        <small>@saul_good_homie</small> <br/>
+                        <p>
+                        <%= Post.first.post %>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </a>
+    
+	<a class="panel-block">
+        <div class="box">
+            <article class="media">
+
+                <div class="media-left">
+                    <figure class="image is-32x32">
+                        <%= image_tag("Vikings_logo.jpg", :alt => "Vikings logo") %> 
+                    </figure>
+                </div>
+
+                <div class="media-content">
+                    <div class="content">
+                        <strong>Saul Belisle</strong> <br/>
+                        <small>@saul_good_homie</small> <br/>
+                        <p>
+                        <%= Post.last.post %>
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </a>
+    
+	</nav>
+</div>

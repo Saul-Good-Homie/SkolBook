@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -24,6 +25,34 @@
   		</div>
     <% end %>
     
+    <nav class="navbar is-info">
+    
+    <div class="navbar-brand">
+    <figure class="image is-64x64">
+    <%= image_tag("Vikings_logo.png", :alt => "Vikigns logo") %> 
+    </figure>
+        <%= link_to root_path, class: "navbar-item" do %>
+        <h1 class="title is-5">Skolbook</h1>
+      <% end %>
+    <div class="navbar-burger burger" data-target="navbarExample">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+   </div>
+
+   <div id="navbarExample" class="navbar-menu">
+   <div class="navbar-end">
+     <div class="navbar-item">
+     <div class="field is-grouped">
+       <p class="control">
+         <%= link_to 'New Post', root_path, class: "button is-info is-inverted" %>
+       </p>
+
+       <p class="control">Sign up</p>
+
+       </nav>
+
     
     <%= yield %>
   </body>
