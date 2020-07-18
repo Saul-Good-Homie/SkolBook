@@ -1,74 +1,23 @@
 <div class="column is-one-quarter">
 	<nav class="panel">
 	<p class="panel-heading">Top Posts</p>
-	
-	<a class="panel-block">
-        <div class="box">
-            <article class="media">
-            <div class="media-left">
-                <figure class="image is-32x32">
-                    <%= image_tag("Vikings_logo.jpg", :alt => "Vikings logo") %> 
-                </figure>
-            </div>
-
-                <div class="media-content">
-                    <div class="content">
-                        <strong>Saul Belisle</strong> <br/>
-                        <small>@saul_good_homie</small> <br/>
-                        <p>
-                        Post 1 Here
-                        </p>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </a>
     
-	<a class="panel-block">
-        <div class="box">
-            <article class="media">
-
-                <div class="media-left">
-                    <figure class="image is-32x32">
-                        <%= image_tag("Vikings_logo.jpg", :alt => "Vikings logo") %> 
-                    </figure>
-                </div>
-
-                <div class="media-content">
-                    <div class="content">
-                        <strong>Saul Belisle</strong> <br/>
-                        <small>@saul_good_homie</small> <br/>
-                        <p>
-                        Post 2 Here
-                        </p>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </a>
     
-	<a class="panel-block">
-        <div class="box">
-            <article class="media">
+    <% popular = Like.popular %>
+                        
+    <% popular.each do | like | %>
 
-                <div class="media-left">
-                    <figure class="image is-32x32">
-                        <%= image_tag("Vikings_logo.jpg", :alt => "Vikings logo") %> 
-                    </figure>
-                </div>
-
-                <div class="media-content">
+	<div class="panel-block">
                     <div class="content">
-                        <strong>Saul Belisle</strong> <br/>
-                        <small>@saul_good_homie</small> <br/>
-                        <p>
-                        Post 3 Here
-                        </p>
+                    <p>
+                        <%= like.post.post %>
+                        </br>
+                        <span class="icon"><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+                        <%= like.count %> <%= (like.count) == 1 ? 'Like' : 'Likes'%>
+                    </p>
                     </div>
-                </div>
-            </article>
-        </div>
-    </a>
+    </div>
+    <% end %>
     
-	</nav>
+    </nav>
 </div>
