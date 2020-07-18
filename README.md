@@ -1,24 +1,10 @@
-# README
+Ruby on Rails Project from [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Created by Saul Belisle [Twitter](https://twitter.com/saul_good_homie): @saul_good_homie
 
-Things you may want to cover:
+View this project [online](https://tranquil-castle-04083.herokuapp.com/)
 
-* Ruby version
+Skills practiced:
+  *Bulma
+  *Devise
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
