@@ -1,5 +1,7 @@
 <div class="column is-half">
 
+<% if user_signed_in? %>
+
     <article class="media box">
         <figure class="media-left">
             <p class="image is-64x64">
@@ -12,6 +14,8 @@
         </div>
     </article>
 
+<% end %>
+
 <% @posts.each do | post | %>
     <div class="box">
         <article class="media">
@@ -23,14 +27,19 @@
             
             <div class="media-content">
                 <div class="content">
-                    <strong>Saul Belisle</strong> <br/>
-                    <small>@saul_good_homie</small> <br/>
+                    <% if user_signed_in? %>
+                            <strong><%=post.user.name %></strong> <br/>
+                            <small><%=post.user.username%></small> <br/>
+                        <% else %>  
+                            <strong> Anonymous </strong> <br/>
+                            <small> Anonymous </small> <br/>
+                    <% end %>
                     <p>
                         <%= post.post %>
                     </p>
                 </div>
-            </div>
             
+            <% if user_signed_in? %>
             <nav class="level">
                 <div class="level-left is-mobile">
                     <%= link_to post, class: "level-item" do %>
@@ -44,7 +53,8 @@
                     <% end %>
                 </div>
             </nav>
-
+            <% end %>
+            </div>            
         </article>
     </div>
 
